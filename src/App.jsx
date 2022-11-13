@@ -77,19 +77,19 @@ function App() {
       </div>
       <div id='rightSec'>
         <div className='seg'>
-          <Poly color={segment["A"] ? activeColor : color} dir="h" text="A" handleClick={handleClick} />
+          <Poly id="A" color={segment["A"] ? activeColor : color} dir="h" text="A" handleClick={handleClick} />
           <div className='seg-row'>
-            <Poly color={segment["F"] ? activeColor : color} dir="v" text="F" handleClick={handleClick} />
-            <Poly color={segment["B"] ? activeColor : color} dir="v" text="B" handleClick={handleClick} />
+            <Poly id="F" color={segment["F"] ? activeColor : color} dir="v" text="F" handleClick={handleClick} />
+            <Poly id="B" color={segment["B"] ? activeColor : color} dir="v" text="B" handleClick={handleClick} />
           </div>
-          <Poly color={segment["G"] ? activeColor : color} dir="h" text="G" handleClick={handleClick} />
+          <Poly id="G" color={segment["G"] ? activeColor : color} dir="h" text="G" handleClick={handleClick} />
           <div className='seg-row'>
-            <Poly color={segment["E"] ? activeColor : color} dir="v" text="E" handleClick={handleClick} />
-            <Poly color={segment["C"] ? activeColor : color} dir="v" text="C" handleClick={handleClick} />
+            <Poly id="E" color={segment["E"] ? activeColor : color} dir="v" text="E" handleClick={handleClick} />
+            <Poly id="C" color={segment["C"] ? activeColor : color} dir="v" text="C" handleClick={handleClick} />
           </div>
-          <Poly color={segment["D"] ? activeColor : color} dir="h" text="D" handleClick={handleClick} />
+          <Poly id="D" color={segment["D"] ? activeColor : color} dir="h" text="D" handleClick={handleClick} />
         </div>
-        <div id='dp' style={{ backgroundColor: segment["DP"] ? activeColor : color }} onClick={e => handleClick(e)('DP')}>DP</div>
+        <div id="dp" style={{ backgroundColor: segment["DP"] ? activeColor : color }} onClick={e => handleClick(e)('DP')}>DP</div>
       </div>
     </div>
   )

@@ -1,42 +1,80 @@
-.App{
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
-margin: auto;
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
 }
 
-#rightSec{
+#rightSec {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 2rem;
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
-.seg{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 400px;
+  gap: 1rem;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
 }
 
-.seg-row{
+.seg {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.seg-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
-.code{
-  width: 200px;
+
+
+#A{
+  position: relative;
+  top: -10px;
+  left: 0px;
+}
+#B{
+  position: relative;
+  top: -30px;
+  left: -10px;
+}
+#F{
+  position: relative;
+  top: -30px;
+  left: -20px;
+}
+#G{
+  position: relative;
+  top: -50px;
+  left: -30px;
+}
+#C{
+  position: relative;
+  top: -68px;
+  left: -40px;
+}
+#E{
+  position: relative;
+  top: -68px;
+  left: -50px;
 }
 
-#dp{
+#D {
+  position: relative;
+  top: -85px;
+  left: -59px;
+}
+
+#dp {
   border: 1px solid black;
   border-radius: 100%;
   width: 50px;
@@ -44,4 +82,15 @@ width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  position: relative;
+  top: -80px;
+  color: black;
+}
+
+
+.code {
+  width: 200px;
+  color: white;
+
 }

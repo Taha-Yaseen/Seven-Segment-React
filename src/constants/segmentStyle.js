@@ -1,5 +1,5 @@
 export const segmentStyle = {
   color: "white",
-  activeColor: "tomato",
-  hoverColor: "#ffa190"
+  activeColor: "chartreuse",
+  hoverColor: "#beff7c"
 }

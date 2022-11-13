@@ -1,13 +1,18 @@
 import { useState } from "react"
 import { segmentStyle } from "../constants/segmentStyle"
 
-export const Poly = ({ color, dir, text, handleClick }) => {
+export const Poly = ({ id, color, dir, text, handleClick }) => {
   const [hovered, setHovered] = useState(false)
+  const [active, setActive] = useState(false)
 
   const handleMouseLeave = () => setHovered(false)
   const handleMouseEnter = () => setHovered(true)
+  const handleMouseUp = () => setActive(false)
+  const handleMouseDown = () => setActive(true)
 
-  return <svg xmlns="http://www.w3.org/2000/svg"
+  return <svg
+    id={id}
+    xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     width={dir == "v" ? "23.0389mm" : "76.8627mm"}
     height={dir == "v" ? "77.1322mm" : "17.1744mm"}
@@ -15,13 +20,15 @@ export const Poly = ({ color, dir, text, handleClick }) => {
     viewBox={dir == "v" ? "0 0 757.35 2535.55" : "0 0 9797.05 2189.08"}
     onMouseLeave={handleMouseLeave}
     onMouseEnter={handleMouseEnter}
+    onMouseDown={handleMouseDown}
+    onMouseUp={handleMouseUp}
     onClick={e => handleClick(e)(text)}
     style={{ cursor: "pointer" }}
   >
     < g id="Layer_x0020_1" >
       <metadata id="CorelCorpID_0Corel-Layer" />
       <polygon
-        fill={hovered ? segmentStyle.hoverColor : color}
+        fill={active ? segmentStyle.activeColor : hovered && color !== segmentStyle.activeColor ? segmentStyle.hoverColor : color}
         stroke="#373435"
         strokeWidth={dir == "v" ? "14px" : "50.6px"}
         strokeMiterlimit={dir == "v" ? "10px" : "29.9256px"}
